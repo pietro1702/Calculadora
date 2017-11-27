@@ -9,19 +9,10 @@
     android:paddingTop="16dp"
     tools:context="br.edu.ifrn.calculadorasimples.MainActivity">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceMedium"
-        android:text="Valor 1"
-        android:id="@+id/textView"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true" />
-
     <EditText
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:hint="Valor 1"
         android:inputType="number"
         android:id="@+id/editTextValor1"
         android:layout_below="@+id/textView"
@@ -30,25 +21,16 @@
         android:layout_alignParentRight="true"
         android:layout_alignParentEnd="true" />
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceMedium"
-        android:text="Valor 2"
-        android:id="@+id/textView2"
-        android:layout_below="@+id/editTextValor1"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"/>
 
     <EditText
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:hint="Valor 2"
         android:inputType="number"
         android:id="@+id/editTextValor2"
-        android:layout_below="@+id/textView2"
-        android:layout_alignParentLeft="true"
+        android:layout_marginTop="8dp"
+        android:layout_below="@+id/editTextValor1"
         android:layout_alignParentStart="true"
-        android:layout_alignParentRight="true"
         android:layout_alignParentEnd="true" />
 
     <Button
@@ -57,9 +39,7 @@
         android:text="+"
         android:textSize="20sp"
         android:id="@+id/buttonSoma"
-        android:layout_below="@+id/editTextValor2"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true" />
+        android:layout_below="@+id/editTextValor2" />
 
     <Button
         android:layout_width="wrap_content"
@@ -67,8 +47,8 @@
         android:text="-"
         android:textSize="20sp"
         android:id="@+id/buttonSub"
-        android:layout_below="@+id/editTextValor2"
-        android:layout_toEndOf="@+id/buttonSoma" />
+        android:layout_below="@+id/buttonSoma"
+        android:layout_alignParentStart="true" />
 
     <Button
         android:layout_width="wrap_content"
@@ -78,7 +58,7 @@
         android:id="@+id/buttonMult"
         android:layout_alignBaseline="@+id/buttonSub"
         android:layout_alignBottom="@+id/buttonSub"
-        android:layout_toEndOf="@+id/buttonSub" />
+        android:layout_alignParentEnd="true" />
 
     <Button
         android:layout_width="wrap_content"
@@ -86,8 +66,7 @@
         android:text="/"
         android:textSize="20sp"
         android:id="@+id/buttonDiv"
-        android:layout_alignBaseline="@+id/buttonSub"
-        android:layout_alignBottom="@+id/buttonSub"
+        android:layout_below="@+id/editTextValor2"
         android:layout_alignParentEnd="true" />
 
     <TextView
@@ -96,9 +75,9 @@
         android:id="@+id/TextViewResultado"
         android:text="00"
         android:gravity="center"
-        android:textSize="60sp"
-        android:layout_below="@+id/buttonMult"
+        android:textSize="50sp"
+        android:layout_below="@+id/buttonSub"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="14dp" />
+        android:layout_marginTop="12dp" />
 
 </RelativeLayout>
