@@ -19,10 +19,10 @@
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true" />
 
-
     <EditText
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:inputType="number"
         android:id="@+id/editTextValor1"
         android:layout_below="@+id/textView"
         android:layout_alignParentLeft="true"
@@ -43,6 +43,7 @@
     <EditText
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:inputType="number"
         android:id="@+id/editTextValor2"
         android:layout_below="@+id/textView2"
         android:layout_alignParentLeft="true"
@@ -53,60 +54,51 @@
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Soma (+)"
+        android:text="+"
+        android:textSize="20sp"
         android:id="@+id/buttonSoma"
         android:layout_below="@+id/editTextValor2"
         android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:layout_alignRight="@+id/buttonMult"
-        android:layout_alignEnd="@+id/buttonMult"/>
+        android:layout_alignParentStart="true" />
 
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Subtração (-)"
+        android:text="-"
+        android:textSize="20sp"
         android:id="@+id/buttonSub"
-        android:layout_alignTop="@+id/buttonSoma"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentEnd="true"/>
+        android:layout_below="@+id/editTextValor2"
+        android:layout_toEndOf="@+id/buttonSoma" />
 
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Multiplicação (*)"
+        android:text="*"
+        android:textSize="20sp"
         android:id="@+id/buttonMult"
-        android:layout_centerVertical="true"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"/>
+        android:layout_alignBaseline="@+id/buttonSub"
+        android:layout_alignBottom="@+id/buttonSub"
+        android:layout_toEndOf="@+id/buttonSub" />
 
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Divisão (/)"
+        android:text="/"
+        android:textSize="20sp"
         android:id="@+id/buttonDiv"
-        android:layout_alignBaseline="@+id/buttonMult"
-        android:layout_alignBottom="@+id/buttonMult"
-        android:layout_alignParentEnd="true"
-        android:layout_alignLeft="@+id/buttonSub"
-        android:layout_alignStart="@+id/buttonSub" />
+        android:layout_alignBaseline="@+id/buttonSub"
+        android:layout_alignBottom="@+id/buttonSub"
+        android:layout_alignParentEnd="true" />
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceMedium"
-        android:text="Resultado"
-        android:id="@+id/textView3"
+        android:id="@+id/TextViewResultado"
+        android:text="00"
+        android:gravity="center"
+        android:textSize="60sp"
         android:layout_below="@+id/buttonMult"
-        android:layout_alignParentStart="true"
-        android:layout_marginTop="25dp" />
-
-    <EditText
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/editTextResultado"
-        android:layout_marginTop="41dp"
-        android:layout_below="@+id/buttonMult"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentEnd="true" />
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="14dp" />
 
 </RelativeLayout>

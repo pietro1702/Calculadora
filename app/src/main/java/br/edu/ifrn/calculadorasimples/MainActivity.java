@@ -5,11 +5,12 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
     EditText ed1;
     EditText ed2;
-    EditText edR;
+    TextView edR;
     Button btSoma;
     Button btSub;
     Button btMult;
@@ -22,7 +23,7 @@ public class MainActivity extends AppCompatActivity {
 
         ed1 = (EditText) findViewById(R.id.editTextValor1);
         ed2 = (EditText) findViewById(R.id.editTextValor2);
-        edR = (EditText) findViewById(R.id.editTextResultado);
+        edR = (TextView) findViewById(R.id.TextViewResultado);
         btSoma = (Button) findViewById(R.id.buttonSoma);
         btSub = (Button) findViewById(R.id.buttonSub);
         btMult = (Button) findViewById(R.id.buttonMult);
